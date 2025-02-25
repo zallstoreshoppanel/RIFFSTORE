@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RIFF STORE</title>
+  <!-- Memuat Font Awesome untuk ikon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-...isi-sendiri..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #2e2f35;
+      color: #fff;
+      line-height: 1.5;
+    }
+    /* Wrapper utama */
+    .app-wrapper {
+      max-width: 480px; /* Lebar maksimal seperti aplikasi HP */
+      margin: 0 auto;
+      border: 1px solid #444;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      background-color: #2e2f35;
+    }
+    /* Header (banner) */
+    .header-banner {
+      background-color: #3a3b42;
+      padding: 10px;
+      position: relative;
+    }
+    .header-banner img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      max-height: 180px;
+    }
+    /* Kategori */
+    .categories {
+      margin: 20px 15px;
+    }
+    .categories h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .category-card {
+      background-color: #40414a;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .category-card:hover {
+      background-color: #50515a;
+    }
+    .category-card span {
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    /* Section Produk/Game */
+    .products {
+      margin: 20px 15px;
+    }
+    .products h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .product-item {
+      background-color: #40414a;
+      border-radius: 8px;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      transition: 0.3s;
+      text-decoration: none; /* hilangkan underline link */
+      color: #fff;
+    }
+    .product-item:hover {
+      background-color: #50515a;
+    }
+    .product-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+    .product-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .product-detail {
+      font-size: 14px;
+      color: #ccc;
+    }
+    .product-price {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ffd700;
+    }
+    /* Bottom Navigation */
+    .bottom-nav {
+      background-color: #3a3b42;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .bottom-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .bottom-nav a i {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    .bottom-nav a.active {
+      color: #ffd700; /* Warna highlight */
+    }
+    /* Responsif */
+    @media (min-width: 481px) {
+      .app-wrapper {
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Wrapper Utama seperti tampilan aplikasi -->
+  <div class="app-wrapper">
+
+    <!-- Bagian Header / Banner -->
+    <div class="header-banner">
+      <!-- Ganti dengan gambar banner sendiri -->
+      <img src="bann.jpg" alt="Banner">
+    </div>
+
+    <!-- Bagian Kategori -->
+    <div class="categories">
+      <h2>Categories</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <i class="fas fa-gamepad fa-2x"></i>
+          <span>Mobile Games</span>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-laptop fa-2x"></i>
+          <span>PC Games</span>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-ticket-alt fa-2x"></i>
+          <span>Vouchers</span>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-film fa-2x"></i>
+          <span>Entertainment</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Produk (Mobile Games / Barang lain) -->
+    <div class="products">
+      <h2>Mobile Games</h2>
+      <div class="product-list">
+
+        <!-- Item Produk 1 -->
+        <a 
+          class="product-item"
+          href="https://wa.me/6283821914043?text=Halo,%20saya%20ingin%20membeli%20panel%20private%"
+          target="_blank"
+          >
+          <img src="panel.jpg" alt="Produk 1">
+          <div class="product-info">
+            <div class="product-title">PANEL FREE FIRE</div>
+            <div class="product-detail">PANEL PRIVATE</div>
+            <div class="product-price">Rp 10.000</div>
+          </div>
+        </a>
+
+        <!-- Item Produk 2 -->
+        <a 
+          class="product-item"
+          href="https://wa.me/6283821914043?text=Halo,%20saya%20ingin%20membeli%20Rege%50%"
+          target="_blank"
+          >
+          <img src="rege.jpg" alt="Produk 2">
+          <div class="product-info">
+            <div class="product-title">REGE FREE FIRE</div>
+            <div class="product-detail">REGE FF 50%</div>
+            <div class="product-price">Rp 5.000</div>
+          </div>
+        </a>
+
+        <!-- Item Produk 3 -->
+        <a 
+          class="product-item"
+          href="https://wa.me/6283821914043?text=Halo,%20saya%20ingin%20membeli%20Rege%75%"
+          target="_blank"
+          >
+          <img src="rege.jpg" alt="Produk 3">
+          <div class="product-info">
+            <div class="product-title">REGE FREE FIRE</div>
+            <div class="product-detail">REGE FF 75%</div>
+            <div class="product-price">Rp 7.000</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Bottom Navigation (Seperti di aplikasi) -->
+    <div class="bottom-nav">
+      <a href="#" class="active">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <a href="#">
+        <i class="fas fa-ticket-alt"></i>
+        Voucher
+      </a>
+      <a href="#">
+        <i class="fas fa-comments"></i>
+        Chat
+      </a>
+      <a href="#">
+        <i class="fas fa-user"></i>
+        Profile
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
